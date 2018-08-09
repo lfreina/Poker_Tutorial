@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poker Demo</title>
+</head>
+<body>
+  <form  method="post" >
+  <div class="text">
+	{{ "Card 1" }} 
+
+	<select name= "suits1" method="POST">
+	{% for suit in form.suits1 %}
+	<option value= "{{ suit }}"
+			{% if suit == save['suits1'] %}SELECTED{% endif %}
+			>{{ suit }}</option>"
+	{% endfor %}
+	</select>
+
+	<select name= "rank1" method="POST" action="/">
+	{% for rank in form.rank1 %}
+	<option value= "{{ rank }}"
+			{% if rank == save['rank1'] %}SELECTED{% endif %}
+			>{{ rank }}</option>"
+	{% endfor %}
+	</select>
+	
+  </div>
+  <div class="text">
+	{{ "Card 2"}}
+	  <select name= "suits2" method="POST" action="/">
+		{% for suit in form.suits2 %}
+		<option value= "{{ suit }}"
+				{% if suit == save['suits2'] %}SELECTED{% endif %}
+				>{{ suit }}</option>"
+		{% endfor %}
+	  </select>
+	  <select name= "rank2" method="POST" action="/">
+		{% for rank in form.rank2 %}
+		<option value= "{{ rank }}"
+				{% if rank == save['rank2'] %}SELECTED{% endif %}
+				>{{ rank }}</option>"
+		{% endfor %}
+	  </select>
+	
+  </div>
+  <div class="text">
+	{{ "Card 3"}}
+	  <select name= "suits3" method="POST" action="/">
+		{% for suit in form.suits3 %}
+		<option value= "{{ suit }}"
+				{% if suit == save['suits3'] %}SELECTED{% endif %}
+				>{{ suit }}</option>"
+		{% endfor %}
+	  </select>
+	  <select name= "rank3" method="POST" action="/">
+		{% for rank in form.rank3 %}
+		<option value= "{{ rank }}"
+				{% if rank == save['rank3'] %}SELECTED{% endif %}
+				>{{ rank }}</option>"
+		{% endfor %}
+	  </select>
+  </div>
+  <div class="text">
+	{{ "Card 4"}}
+
+	<select name= "suits4" method="POST" action="/">
+	  {% for suit in form.suits4 %}
+	  <option value= "{{ suit }}"
+			  {% if suit == save['suits4'] %}SELECTED{% endif %}
+			  >{{ suit }}</option>"
+	  {% endfor %}
+	</select>
+	<select name= "rank4" method="POST" action="/">
+	  {% for rank in form.rank4 %}
+	  <option value= "{{ rank }}"
+			  {% if rank == save['rank4'] %}SELECTED{% endif %}
+			  >{{ rank }}</option>"
+	  {% endfor %}
+	</select>
+	
+  </div>
+  <div class="text">
+	{{ "Card 5"}}
+	
+	<select name= "suits5" method="POST" action="/">
+	  {% for suit in form.suits5 %}
+	  <option value= "{{ suit }}"
+			  {% if suit == save['suits5'] %}SELECTED{% endif %}
+			  >{{ suit }}</option>"
+	  {% endfor %}
+	</select>
+	<select name= "rank5" method="POST" action="/">
+	  {% for rank in form.rank5 %}
+	  <option value= "{{ rank }}"
+			  {% if rank == save['rank5'] %}SELECTED{% endif %}
+			  >{{ rank }}</option>"
+	  {% endfor %}
+	</select>
+  </div>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message[1] }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  
+  <div class="input submit">
+	<input type="submit" value="Predict" />
+  </div>
+  </form>
+
+</body>
+</html>

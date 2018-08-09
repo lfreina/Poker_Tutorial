@@ -10,6 +10,10 @@ RUN apt-get install -y python-numpy python-scipy
 RUN pip install scikit-learn
 RUN pip install flask-restful
 RUN pip install wtforms
+RUN pip install tensorflow
+RUN pip install pandas
+RUN pip install keras
+RUN pip install xgboost
 
 # add our project
 ADD . /
