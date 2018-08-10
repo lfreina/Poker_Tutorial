@@ -19,9 +19,13 @@ Tutorial to build and deploy a model to classify poker hands using Data Science 
   ```
 
 - Now run the Docker image with:
-
+  For Linux hosts:
   ```
   docker run --net host -d --name web_poker python_poker
   ```
-
-- The app's JSON API is now listening on port `5000` of this host.  Congrats! You just deployed your first dockerized data science application.  Now go forth and develop, train, test, validate, dockerize, and deploy more.
+  For Windows hosts:
+  ```
+  docker run -p 5000:5000 -d --name web_poker python_poker
+  ```
+  
+- The app's JSON API is now listening on port `5000` of this host. Access it at 127.0.0.1:5000.  Congrats! You just deployed your first dockerized data science application.  Now go forth and develop, train, test, validate, dockerize, and deploy more.
