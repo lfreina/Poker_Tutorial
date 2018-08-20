@@ -1,6 +1,10 @@
 # Poker_Tutorial
 Tutorial to build and deploy a model to classify poker hands using Data Science tools. 
 
+You can find a PDF with a tutorial and a poker.py that contains the code used for generating the model used at the Flask api.
+
+Let us know if you have some feedback!
+
 # Installation
 
 - Install these dependencies:
@@ -29,3 +33,4 @@ Tutorial to build and deploy a model to classify poker hands using Data Science 
   ```
   
 - The app's JSON API is now listening on port `5000` of this host. Access it at 127.0.0.1:5000.  Congrats! You just deployed your first dockerized data science application.  Now go forth and develop, train, test, validate, dockerize, and deploy more.
+
